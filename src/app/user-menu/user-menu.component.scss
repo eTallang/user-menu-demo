@@ -1,0 +1,91 @@
+@import "~@angular/cdk/overlay";
+@include cdk-overlay();
+
+.user-menu-button {
+  background: transparent;
+  border: none;
+  margin: 0;
+  padding: 0;
+  color: white;
+  cursor: pointer;
+
+  i {
+    font-size: 40px;
+  }
+
+  &:hover,
+  &:focus {
+    color: #ededed;
+    outline: none;
+  }
+
+  &:active {
+    color: #dedede;
+  }
+}
+
+.user-menu {
+  overflow: hidden;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.16);
+  border-radius: 6px;
+  background-color: white;
+  position: absolute;
+  white-space: nowrap;
+  overflow: hidden;
+
+  .body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px 60px;
+
+    .user-icon {
+      font-family: "Leckerli One";
+      background-color: #0091ea;
+      color: white;
+      font-size: 4rem;
+      border-radius: 50%;
+      width: 110px;
+      height: 110px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      span {
+        margin-left: -5px;
+        margin-top: 5px;
+      }
+    }
+
+    .name {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin: 30px 0 6px;
+      color: #333;
+    }
+
+    .email {
+      font-size: 0.8rem;
+      color: #333;
+      margin: 0;
+    }
+  }
+
+  .footer {
+    padding: 30px 40px;
+    background-color: rgba(0, 0, 0, 0.03);
+    display: flex;
+    justify-content: center;
+
+    .sign-out-button {
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #0091ea;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+  }
+}
