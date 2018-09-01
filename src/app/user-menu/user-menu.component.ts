@@ -22,7 +22,8 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
           transform: 'scale(1)'
         })
       ),
-      transition('void <=> *', animate('500ms cubic-bezier(.1, 0, 0, 1)')),
+      transition('void => *', animate('500ms cubic-bezier(.1, 0, 0, 1)')),
+      transition('* => void', animate('200ms cubic-bezier(.1, 0, 0, 1)'))
     ])
   ]
 })
