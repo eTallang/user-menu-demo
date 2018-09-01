@@ -2,6 +2,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    // width: 200%;
-    // height: 200%;
+
+    .toolbar {
+        width: 100%;
+        padding: 6px 20px;
+        color: #dedede;
+        box-shadow: 0 0 6px rgba(0, 0, 0, .3);
+        display: flex;
+        // justify-content: flex-end;
+    }
 }
