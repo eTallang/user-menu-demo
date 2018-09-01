@@ -1,14 +1,15 @@
 .page-container {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+    height: 100%;
 
     .toolbar {
         width: 100%;
         padding: 6px 20px;
-        color: #dedede;
+        background-color: #03A9F4;
         box-shadow: 0 0 6px rgba(0, 0, 0, .3);
         display: flex;
         // justify-content: flex-end;
+        // align-self: flex-end;
     }
 }
