@@ -1,0 +1,17 @@
+<button class="fab-button" (click)="isOpen = !isOpen" cdkOverlayOrigin #trigger="cdkOverlayOrigin">
+  <i class="material-icons" @icon *ngIf="isOpen; else edit">close</i>
+  <ng-template #edit>
+    <i class="material-icons" @icon>edit</i>
+  </ng-template>
+</button>
+
+<ng-template cdkConnectedOverlay [cdkConnectedOverlayOrigin]="trigger" [cdkConnectedOverlayOpen]="isOpen" [cdkConnectedOverlayPositions]="position"
+  (detach)="isOpen = false">
+  <div class="action-container" [@listAnimation]="actions.length">
+    <div cdkTrapFocus cdkTrapFocusAutoCapture>
+      <button class="action-button" *ngFor="let action of actions" (click)="onActionSelect(action)">
+        <i class="material-icons">{{action}}</i>
+      </button>
+    </div>
+  </div>
+</ng-template>

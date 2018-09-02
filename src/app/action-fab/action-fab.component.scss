@@ -1,0 +1,61 @@
+@import '~@angular/cdk/overlay';
+@include cdk-overlay();
+
+$fab-offset: 20px;
+$fab-size: 60px;
+$action-size: 46px;
+
+@mixin buttonBase() {
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 100ms ease-in-out, background-color 100ms ease-in-out;
+
+  &:hover,
+  &:focus {
+    transform: scale(1.12);
+    outline: none;
+  }
+}
+
+.fab-button {
+  @include buttonBase();
+  background-color: #ff9100;
+  position: fixed;
+  bottom: $fab-offset;
+  right: $fab-offset;
+  width: $fab-size;
+  height: $fab-size;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+
+  i {
+    position: absolute;
+  }
+
+  &:active {
+    background-color: lighten(#ff9100, 10%);
+  }
+}
+
+.action-container {
+  display: flex;
+  flex-direction: column;
+
+  .action-button {
+    @include buttonBase();
+    flex: none;
+    background-color: #29b6f6;
+    width: $action-size;
+    height: $action-size;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 16px;
+
+    &:active {
+      background-color: lighten(#29b6f6, 10%);
+    }
+  }
+}
