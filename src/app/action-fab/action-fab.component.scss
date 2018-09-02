@@ -7,13 +7,18 @@ $action-size: 46px;
 
 @mixin buttonBase() {
   color: white;
-  border: none;
   border-radius: 50%;
-  cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: transform 100ms ease-in-out, background-color 100ms ease-in-out;
+  transition: all 100ms ease-in-out;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  -webkit-tap-highlight-color: transparent;
+  &::-moz-focus-inner {
+    border: 0;
+  }
 
   &:hover,
   &:focus {
